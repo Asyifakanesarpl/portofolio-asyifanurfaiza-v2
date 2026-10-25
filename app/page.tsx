@@ -1,69 +1,126 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
+    <main className="min-h-screen bg-[#eaf0f6] py-8 px-4 flex justify-center">
+      <div className="max-w-4xl w-full space-y-6">
+        
+        {/* Header / Navbar */}
+        <header className="bg-[#1e3a5f] text-white px-6 py-4 rounded-xl flex justify-between items-center shadow-md">
+          <h1 className="text-xl font-bold tracking-wide">Asyifa Nurfaiza</h1>
+          <nav className="space-x-6 text-sm font-medium">
+            <a href="#" className="hover:text-gray-300">Beranda</a>
+            <a href="#" className="border-b-2 border-white pb-1 font-semibold">Tentang</a>
+            <a href="#" className="hover:text-gray-300">Proyek</a>
+            <a href="#" className="hover:text-gray-300">Kontak</a>
+          </nav>
+        </header>
+
+        {/* Section Foto Profil & Sapaan (Berjajar Menyamping) */}
+        <section className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col md:flex-row items-center gap-6">
+          <div className="w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-pink-200 shrink-0">
+            <img
+              src="/image.png" 
+              alt="Foto Asyifa Nurfaiza"
+              className="w-full h-full object-cover"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
+          <div className="space-y-2 text-center md:text-left">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+              Halo, saya Asyifa Nurfaiza!
+            </h2>
+            <p className="text-gray-600 text-sm md:text-base">
+              Siswa kelas X RPL SMKN 1 Kepanjen, calon Junior Web Developer.
+            </p>
+          </div>
+        </section>
+
+        {/* Tentang Saya */}
+        <section className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
+          <h3 className="text-lg font-bold text-gray-900 mb-2">Tentang Saya</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            Saya tinggal di Malang dan senang mencoba hal baru di dunia teknologi. Saya ingin bisa membuat website yang bermanfaat untuk sekolah dan UMKM di sekitar rumah.
+          </p>
+        </section>
+
+        {/* Hobi & Cita-cita Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Hobi */}
+          <section className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <h3 className="text-lg font-bold text-gray-900 mb-3">Hobi</h3>
+            <ul className="list-disc list-inside text-sm text-gray-600 space-y-1.5">
+              <li>Menyanyi</li>
+              <li>Mendengarkan Musik</li>
+              <li>Membaca Buku</li>
+            </ul>
+          </section>
+
+          {/* Cita-cita */}
+          <section className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <h3 className="text-lg font-bold text-gray-900 mb-2">Cita-cita</h3>
+            <p className="text-sm font-semibold text-gray-800 mb-2">
+              Menjadi Front-End Web Developer. Langkah yang Saya rencanakan:
+            </p>
+            <ol className="list-decimal list-inside text-sm text-gray-600 space-y-1">
+              <li>Menuntaskan kelas Industri UBIG sampai Semester 4</li>
+              <li>Magang di perusahaan teknologi</li>
+              <li>Bekerja sebagai Web Developer</li>
+            </ol>
+          </section>
         </div>
-      </main>
-    </div>
+
+        {/* Keahlian */}
+        <section className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
+          <h3 className="text-lg font-bold text-gray-900 mb-4">Keahlian</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="p-4 border border-gray-100 rounded-xl bg-gray-50/50">
+              <h4 className="font-semibold text-gray-800 text-sm">HTML & CSS</h4>
+              <p className="text-xs text-gray-500 mt-1">Level: Menengah</p>
+            </div>
+            <div className="p-4 border border-gray-100 rounded-xl bg-gray-50/50">
+              <h4 className="font-semibold text-gray-800 text-sm">JavaScript</h4>
+              <p className="text-xs text-gray-500 mt-1">Level: Dasar</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Jadwal Belajar */}
+        <section className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100">
+          <h3 className="text-lg font-bold text-gray-900 mb-4">Jadwal Belajar</h3>
+          <div className="overflow-x-auto rounded-xl border border-gray-200">
+            <table className="w-full text-left text-sm text-gray-600">
+              <thead className="bg-[#1e3a5f] text-white font-semibold">
+                <tr>
+                  <th className="py-3 px-4">Hari</th>
+                  <th className="py-3 px-4">Waktu</th>
+                  <th className="py-3 px-4">Kegiatan</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                <tr className="hover:bg-gray-50">
+                  <td className="py-3 px-4 font-medium">Senin</td>
+                  <td className="py-3 px-4">19.00 - 20.00</td>
+                  <td className="py-3 px-4">Membaca ulang modul</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="py-3 px-4 font-medium">Rabu</td>
+                  <td className="py-3 px-4">19.00 - 21.00</td>
+                  <td className="py-3 px-4">Mengerjakan tugas praktik</td>
+                </tr>
+                <tr className="hover:bg-gray-50">
+                  <td className="py-3 px-4 font-medium">Jumat</td>
+                  <td className="py-3 px-4">19.30 - 20.30</td>
+                  <td className="py-3 px-4">Merekam video dan menulis laporan</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="bg-[#1e3a5f] text-white text-center py-4 rounded-xl text-xs">
+          © 2026 Asyifa Nurfaiza. Dibuat dengan Next.js
+        </footer>
+
+      </div>
+    </main>
   );
 }
