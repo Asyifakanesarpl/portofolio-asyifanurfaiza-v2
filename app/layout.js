@@ -1,20 +1,36 @@
-import "./global.css";
+import { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+});
 
 export const metadata = {
-    title: {
-        default: "Asyifa Nurfaiza | Portofolio",
-        template: "%s  | Asyifa Nurfaiza ",
-    },
-    description:
-    "Portofolio Asyifa Nurfaiza, siswa SMK calon Junior Web Developer ",
+  title: {
+    default: "Asyifa Nurfaiza | portofolio",
+    template: "%s | Asyifa Nurfaiza",
+  },
+  description: "portofolio Asyifa Nurfaiza, siswa SMK calon Junior Web Developer di kelas Industri UBIG",
 };
 
-export default function RootLayout({ childern }) {
-    return (
-        <html lang="id">
-            <body className="bg-slate-100 text-gray-800 antilased font-sans">
-                {childern}
-            </body>
-        </html>
-    );
+export default function RootLayout({ children }) {
+  return (
+    <html
+      lang="id"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col bg-latar text-gray-800">
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
 }

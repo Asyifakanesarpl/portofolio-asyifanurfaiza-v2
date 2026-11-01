@@ -28,7 +28,7 @@ export default function Home() {
               Halo, saya Asyifa Nurfaiza!
             </h2>
             <p className="text-gray-600 text-sm md:text-base">
-              Siswa kelas X RPL SMKN 1 Kepanjen, calon Junior Web Developer.
+              Siswa kelas X RPL SMKN, calon Junior Web Developer di Kelas Industri UBIG.
             </p>
           </div>
         </section>
